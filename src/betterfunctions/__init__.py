@@ -1,2 +1,2 @@
-__version__ = "0.0.3"
-from .functions import Functions
+__version__ = "0.0.4"
+from .functions import functions
