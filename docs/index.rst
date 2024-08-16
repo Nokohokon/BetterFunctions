@@ -1,13 +1,16 @@
-.. include:: ../README.md
-   :parser: myst_parser.sphinx_
 
+Welcome to betterfunctions's documentation!
+========================================================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
    :hidden:
+   :caption: Contents:
 
 
-
-   betterfunctions/functions
-
+   betterfunctions/filefunctions
+   betterfunctions/mathfunctions
+   betterfunctions/randomfunctions
+   betterfunctions/textfunctions
+   betterfunctions/timefunctions
+   betterfunctions/userinputfunctions

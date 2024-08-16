@@ -11,7 +11,7 @@ import os
 
 sys.path.insert(0,os.path.abspath("../"))
 
-from src.betterfunctions import __version__
+from betterfunctions import __version__
 
 project = 'betterfunctions'
 copyright = '2024, konnija'
