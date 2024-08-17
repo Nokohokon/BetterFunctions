@@ -5,7 +5,7 @@ import random
 ## Zufallsfunktionen
 
 
-def generate_password(length=12, include_special=True):
+def generate_password(length: int = 12, include_special: bool = True):
     """Generiert ein zufälliges Passwort mit der angegebenen Länge.
 
     Parameters
@@ -28,7 +28,7 @@ def random_color():
     return "#{:06x}".format(random.randint(0, 0xFFFFFF))
 
 
-def random_choice(items=list):
+def random_choice(items: list):
     """Wählt zufällig ein Element aus einer Liste aus.
 
     Parameters
@@ -40,7 +40,7 @@ def random_choice(items=list):
     return random.choice(items)
 
 
-def shuffle_list(items):
+def shuffle_list(items: list):
     """Mischt eine Liste zufällig.
 
     Parameters

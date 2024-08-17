@@ -9,7 +9,7 @@ import datetime
 
 
 
-def fibonacci(n):
+def fibonacci(n: int):
     """Generiert eine Liste der Fibonacci-Zahlen bis n.
 
     Parameters
@@ -24,7 +24,7 @@ def fibonacci(n):
     return fib_sequence
 
 
-def is_prime(num):
+def is_prime(num: int):
     """Überprüft, ob eine Zahl prim ist.
 
     Parameters
@@ -41,7 +41,7 @@ def is_prime(num):
     return True
 
 
-def prime_numbers(n):
+def prime_numbers(n: int):
     """Generiert eine Liste der Primzahlen bis n.
 
     Parameters
@@ -53,7 +53,7 @@ def prime_numbers(n):
     return [x for x in range(2, n + 1) if is_prime(x)]
 
 
-def gcd(a, b):
+def gcd(a: int, b: int):
     """Berechnet den größten gemeinsamen Teiler zweier Zahlen.
 
     Parameters
@@ -98,7 +98,7 @@ def factorial(n):
         return n * factorial(n-1)
 
 
-def celsius_to_fahrenheit(celsius):
+def celsius_to_fahrenheit(celsius: float):
     """Konvertiert Celsius in Fahrenheit.
 
     Parameters
@@ -110,7 +110,7 @@ def celsius_to_fahrenheit(celsius):
     return (celsius * 9/5) + 32
 
 
-def fahrenheit_to_celsius(fahrenheit):
+def fahrenheit_to_celsius(fahrenheit: float):
     """Konvertiert Fahrenheit in Celsius.
 
     Parameters
@@ -153,7 +153,7 @@ def int_to_roman(num):
     return roman_num
 
 
-def distance_between_points(x1, y1, x2, y2):
+def distance_between_points(x1: float, y1: float, x2: float, y2: float):
     """Berechnet die Entfernung zwischen zwei Punkten.
 
     Parameters

@@ -61,7 +61,7 @@ def count_lines(
 
     return total_lines
 
-def word_count(text):
+def word_count(text: str):
     """Zählt die Anzahl der Wörter in einem gegebenen Text.
 
     Parameters
@@ -73,7 +73,7 @@ def word_count(text):
     return len(words)
 
 
-def reverse_string(s):
+def reverse_string(s: str):
     """Kehrt einen gegebenen String um.
 
     Parameters
@@ -84,7 +84,7 @@ def reverse_string(s):
     return s[::-1]
 
 
-def remove_punctuation(text):
+def remove_punctuation(text: str):
     """Entfernt Satzzeichen aus einem gegebenen Text.
 
     Parameters
@@ -96,7 +96,7 @@ def remove_punctuation(text):
     return ''.join(char for char in text if char not in string.punctuation)
 
 
-def replace_substring(text, old, new):
+def replace_substring(text: str, old: str, new: str):
     """Ersetzt ein Substring durch einen neuen String.
 
     Parameters
@@ -112,7 +112,7 @@ def replace_substring(text, old, new):
     return text.replace(old, new)
 
 
-def to_snake_case(text):
+def to_snake_case(text:str):
     """Wandelt einen String in snake_case um.
 
     Parameters
@@ -124,7 +124,7 @@ def to_snake_case(text):
     return text.lower().replace(" ", "_")
 
 
-def to_camel_case(text):
+def to_camel_case(text:str):
     """Wandelt einen String in camelCase um.
 
     Parameters

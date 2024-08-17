@@ -1,9 +1,10 @@
 import sys
+
+
 ## Benutzereingabefunktionen
 
 
-
-def intput(prompt="Bitte gib eine Ganzzahl ein: "):
+def intput(prompt: str ="Bitte gib eine Ganzzahl ein: "):
     """Fragt den Benutzer nach einer Ganzzahl und gibt diese als Integer zurück.
 
     Parameters
@@ -19,7 +20,7 @@ def intput(prompt="Bitte gib eine Ganzzahl ein: "):
             print("Ungültige Eingabe. Bitte gib eine gültige Zahl ein.")
 
 
-def floatput(prompt="Bitte gib eine Gleitzahl ein: "):
+def floatput(prompt: str = "Bitte gib eine Gleitzahl ein: "):
     """Fragt den Benutzer nach einer Zahl und gibt diese als Float zurück.
 
     Parameters
@@ -35,7 +36,7 @@ def floatput(prompt="Bitte gib eine Gleitzahl ein: "):
             print("Ungültige Eingabe. Bitte gib eine gültige Zahl ein.")
 
 
-def yes_no_input(prompt="Bitte antworte mit Ja oder Nein: "):
+def yes_no_input(prompt: str = "Bitte antworte mit Ja oder Nein: "):
     """Fragt den Benutzer nach einer Ja/Nein-Antwort und gibt True oder False zurück.
 
     Parameters

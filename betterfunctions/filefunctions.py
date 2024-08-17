@@ -4,7 +4,7 @@ import os
 
 
 
-def file_size(file_path,type = "KB"):
+def file_size(file_path: str ,type: str = "KB"):
     """Gibt die Größe einer Datei zurück.
 
     Parameters
@@ -28,22 +28,22 @@ def file_size(file_path,type = "KB"):
     return r
 
 
-def list_files_in_directory(directory):
+def list_files_in_directory(directory: str):
     """Listet alle Dateien in einem Verzeichnis auf."""
     return os.listdir(directory)
 
 
-def create_directory(directory):
+def create_directory(directory: str):
     """Erstellt ein neues Verzeichnis."""
     os.makedirs(directory, exist_ok=True)
 
 
-def delete_file(file_path):
+def delete_file(file_path: str):
     """Löscht eine Datei."""
     os.remove(file_path)
 
 
-def create_text_file(directory=None, text=str, filename="file.txt"):
+def create_text_file(text: str,directory: str|None = None, filename: str ="file.txt"):
     if not text:
         raise("Please insert a text into the function.")
     """
