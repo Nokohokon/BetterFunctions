@@ -15,5 +15,12 @@ def current_time():
 
 
 def is_leap_year(year: int):
-    """Überprüft, ob ein Jahr ein Schaltjahr ist."""
+    """Überprüft, ob ein Jahr ein Schaltjahr ist.
+
+    Parameters
+    ----------
+    year:
+        Das Jahr, welches überprüft werden soll.
+
+    """
     return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
