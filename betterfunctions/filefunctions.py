@@ -54,25 +54,32 @@ def create_directory(directory: str):
 def delete_file(file_path: str):
     """Löscht eine Datei.
 
-        Parameters
-        ----------
-        file_path:
-            Der Pfad zur Datei
+    Parameters
+    ----------
+    file_path:
+        Der Pfad zur Datei
     """
     os.remove(file_path)
 
 
 def create_text_file(text: str,directory: str|None = None, filename: str ="file.txt"):
-    if not text:
-        raise("Please insert a text into the function.")
     """
     Erstellt eine Textdatei mit dem angegebenen Text und Dateinamen.
 
-    :param directory: Das Verzeichnis, in dem die Datei erstellt werden soll.
-                      Wenn None, wird das aktuelle Verzeichnis verwendet.
-    :param text: Der Text, der in die Datei geschrieben werden soll.
-    :param filename: Der Name der zu erstellenden Datei.
+    Parameters
+    ----------
+
+    directory:
+        Das Verzeichnis, in dem die Datei erstellt werden soll.
+        Wenn None, wird das aktuelle Verzeichnis verwendet.
+    text:
+        Der Text, der in die Datei geschrieben werden soll.
+    filename:
+        Der Name der zu erstellenden Datei.
     """
+
+    if not text:
+        raise("Please insert a text into the function.")
     # Verwende das aktuelle Verzeichnis, wenn kein Verzeichnis angegeben ist
     if directory is None:
         directory = os.getcwd()
