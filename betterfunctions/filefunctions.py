@@ -29,17 +29,36 @@ def file_size(file_path: str ,type: str = "KB"):
 
 
 def list_files_in_directory(directory: str):
-    """Listet alle Dateien in einem Verzeichnis auf."""
+    """Listet alle Dateien in einem Verzeichnis auf.
+
+        Parameters
+        ----------
+        directory:
+            Das Verzeichnis, aus  welchem die Dateien aufgelistet werden sollen.
+    """
     return os.listdir(directory)
 
 
 def create_directory(directory: str):
-    """Erstellt ein neues Verzeichnis."""
+    """Erstellt ein neues Verzeichnis.
+
+    Parameters
+    ----------
+    directory:
+        Der Name des neuen Verzeichnisses
+
+    """
     os.makedirs(directory, exist_ok=True)
 
 
 def delete_file(file_path: str):
-    """Löscht eine Datei."""
+    """Löscht eine Datei.
+
+        Parameters
+        ----------
+        file_path:
+            Der Pfad zur Datei
+    """
     os.remove(file_path)
 
 
