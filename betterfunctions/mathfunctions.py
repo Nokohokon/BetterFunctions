@@ -1,13 +1,44 @@
-import random
-import string
-import os
-import sys
 import math
-import datetime
 
 ## Mathematische Funktionen
 
 
+def format_number(number: int, *, decimal_places: int = 1, trailing_zero: bool = False) -> str:
+    """Formatiere eine große Nummer zu einem kleinen Format.
+
+    Parameters
+    ----------
+    number:
+        Die zu formatierende Nummer.
+    decimal_places:
+        Die Anzahl der Dezimalstellen, welche dargestellt werden sollen. Default: ``1``.
+    trailing_zero:
+        Soll eine Trailing Zero dargestellt werden? Default: ``False``.
+
+    Returns
+    -------
+    :class:`str`
+        Die formatierte Zahl.
+
+    """
+
+    suffix = ""
+    if number >= 1_000_000_000 or number <= -1_000_000_000:
+        txt = f"{number / 1_000_000_000:.{decimal_places}f}"
+        suffix = "B"
+    elif number >= 1_000_000 or number <= -1_000_000:
+        txt = f"{number / 1_000_000:.{decimal_places}f}"
+        suffix = "M"
+    elif number >= 100 or number <= -100:
+        txt = f"{number / 1_000:.{decimal_places}f}"
+        suffix = "K"
+    else:
+        txt = str(number)
+
+    if not trailing_zero:
+        txt = txt.rstrip("0").rstrip(".")
+
+    return txt + suffix
 
 def fibonacci(n: int):
     """Generiert eine Liste der Fibonacci-Zahlen bis n.
