@@ -31,10 +31,10 @@ def file_size(file_path: str ,type: str = "KB"):
 def list_files_in_directory(directory: str):
     """Listet alle Dateien in einem Verzeichnis auf.
 
-        Parameters
-        ----------
-        directory:
-            Das Verzeichnis, aus  welchem die Dateien aufgelistet werden sollen.
+    Parameters
+    ----------
+    directory:
+        Das Verzeichnis, aus  welchem die Dateien aufgelistet werden sollen.
     """
     return os.listdir(directory)
 
