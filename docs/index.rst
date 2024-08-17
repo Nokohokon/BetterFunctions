@@ -21,18 +21,21 @@ Das ist die Dokumentation für **betterfunctions**, eine Pythonerweiterung mit n
    betterfunctions/timefunctions
    betterfunctions/userinputfunctions
 
-
-Los starten
------------
+Starten
+-------
 
 Mithilfe dieser Links startest du ganz einfach:
 
 - **Installieren:**
-    Führe diesen Command aus:
+    Führe diesen Command im Terminal aus:
     `pip install betterfunctions`
+
+    Importiere das Package in den Code:
+    `from betterfunctions import *`
+
 
 Hilfe
 -----
 
--Du suchst etwas bestimmtes? Versuche dein Glück mit :ref:`genindex`
--Du hast Discord? Schreibe `konnija` eine DM.
+- Du suchst etwas bestimmtes? Versuche dein Glück mit :ref:`genindex`
+- Du hast Discord? Schreibe `konnija` eine DM.
