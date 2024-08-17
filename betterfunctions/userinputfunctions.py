@@ -4,7 +4,14 @@ import sys
 
 
 def intput(prompt="Bitte gib eine Ganzzahl ein: "):
-    """Fragt den Benutzer nach einer Ganzzahl und gibt diese als Integer zurück."""
+    """Fragt den Benutzer nach einer Ganzzahl und gibt diese als Integer zurück.
+
+    Parameters
+    ----------
+    prompt:
+        Die gewünschte Aufforderung.
+
+    """
     while True:
         try:
             return int(input(prompt))  # Konvertiert die Eingabe in eine Ganzzahl
@@ -13,7 +20,14 @@ def intput(prompt="Bitte gib eine Ganzzahl ein: "):
 
 
 def floatput(prompt="Bitte gib eine Gleitzahl ein: "):
-    """Fragt den Benutzer nach einer Zahl und gibt diese als Float zurück."""
+    """Fragt den Benutzer nach einer Zahl und gibt diese als Float zurück.
+
+    Parameters
+    ----------
+    prompt:
+        Die gewünschte Aufforderung.
+
+    """
     while True:
         try:
             return float(input(prompt))  # Konvertiert die Eingabe in eine Gleitkommazahl
@@ -22,7 +36,13 @@ def floatput(prompt="Bitte gib eine Gleitzahl ein: "):
 
 
 def yes_no_input(prompt="Bitte antworte mit Ja oder Nein: "):
-    """Fragt den Benutzer nach einer Ja/Nein-Antwort und gibt True oder False zurück."""
+    """Fragt den Benutzer nach einer Ja/Nein-Antwort und gibt True oder False zurück.
+
+    Parameters
+    ---------
+    prompt:
+        Die gewünschte Aufforderung.
+    """
     while True:
         answer = input(prompt).lower()
         if answer in ["j", "ja", "y", "yes"]:

@@ -62,32 +62,76 @@ def count_lines(
     return total_lines
 
 def word_count(text):
-    """Zählt die Anzahl der Wörter in einem gegebenen Text."""
+    """Zählt die Anzahl der Wörter in einem gegebenen Text.
+
+    Parameters
+    ---------
+    text:
+        Der Text, aus welchem die Wörter gezählt werden sollen.
+    """
     words = text.split()
     return len(words)
 
 
 def reverse_string(s):
-    """Kehrt einen gegebenen String um."""
+    """Kehrt einen gegebenen String um.
+
+    Parameters
+    ----------
+    s:
+        Der String welcher umgekehrt werden soll.
+    """
     return s[::-1]
 
 
 def remove_punctuation(text):
-    """Entfernt Satzzeichen aus einem gegebenen Text."""
+    """Entfernt Satzzeichen aus einem gegebenen Text.
+
+    Parameters
+    ----------
+
+    text:
+        Der Text, aus welchem Satzzeichen entfernt werden soll
+    """
     return ''.join(char for char in text if char not in string.punctuation)
 
 
 def replace_substring(text, old, new):
-    """Ersetzt ein Substring durch einen neuen String."""
+    """Ersetzt ein Substring durch einen neuen String.
+
+    Parameters
+    ----------
+    text:
+        Der Text, in welchem die Änderung erfolgen soll
+    old:
+        Der zu ersetzende Text.
+    new:
+        Der ersetzte Text.
+
+    """
     return text.replace(old, new)
 
 
 def to_snake_case(text):
-    """Wandelt einen String in snake_case um."""
+    """Wandelt einen String in snake_case um.
+
+    Parameters
+    ----------
+    text:
+        Der Text welcher umgewandelt werden soll.
+
+    """
     return text.lower().replace(" ", "_")
 
 
 def to_camel_case(text):
-    """Wandelt einen String in camelCase um."""
+    """Wandelt einen String in camelCase um.
+
+    Parameters
+    ----------
+    text:
+        Der Text welcher umgewandelt werden soll.
+
+    """
     words = text.split()
     return words[0].lower() + ''.join(word.capitalize() for word in words[1:])

@@ -5,7 +5,16 @@ import os
 
 
 def file_size(file_path,type = "KB"):
-    """Gibt die Größe einer Datei zurück."""
+    """Gibt die Größe einer Datei zurück.
+
+    Parameters
+    ----------
+    file_path:
+        Der Pfad der gewünschten Datei
+    type:
+        Der Größentyp, in welcher die Größe angegeben werden soll. Default: KB
+
+    """
     if type == "KB":
         r = f"{os.path.getsize(file_path) / 1024} Kilobyte"
 
@@ -15,7 +24,7 @@ def file_size(file_path,type = "KB"):
     elif type == "GB":
         r = f"{os.path.getsize(file_path) / 1024 / 1024 / 1024} Gigabyte"
     else:
-        raise("Please insert a regular size like KB (kilobyte), MB (megabyte) or GB (gigabyte)")
+        raise("Please insert a regular size type like KB (kilobyte), MB (megabyte) or GB (gigabyte)")
     return r
 
 
