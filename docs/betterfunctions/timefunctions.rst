@@ -2,7 +2,7 @@ Time Functions
 ==============
 
 
-.. autoclass:: betterfunctions.TimeFunctions
+.. automodule:: betterfunctions.timefunctions
    :members:
    :undoc-members:
    :show-inheritance:

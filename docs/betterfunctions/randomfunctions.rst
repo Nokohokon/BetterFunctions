@@ -2,7 +2,7 @@ Random Functions
 ================
 
 
-.. autoclass:: betterfunctions.RandomFunctions
+.. automodule:::: betterfunctions.randomfunctions
    :members:
    :undoc-members:
    :show-inheritance:

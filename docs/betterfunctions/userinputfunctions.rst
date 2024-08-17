@@ -1,7 +1,7 @@
 User Input Functions
 ====================
 
-.. autoclass:: betterfunctions.UserInputFunctions
+.. automodule:: betterfunctions.userinputfunctions
    :members:
    :undoc-members:
    :show-inheritance:

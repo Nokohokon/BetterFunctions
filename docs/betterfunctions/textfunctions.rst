@@ -1,7 +1,7 @@
 Text Functions
 ==============
 
-.. autoclass:: betterfunctions.TextFunctions
+.. automodule:: betterfunctions.textfunctions
    :members:
    :undoc-members:
    :show-inheritance:

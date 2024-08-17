@@ -2,7 +2,7 @@ File Functions
 ==============
 
 
-.. autoclass:: betterfunctions.FileFunctions
+.. automodule:: betterfunctions.filefunctions
    :members:
    :undoc-members:
    :show-inheritance:

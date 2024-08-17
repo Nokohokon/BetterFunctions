@@ -1,7 +1,7 @@
 Math Functions
 ==============
 
-.. autoclass:: betterfunctions.MathFunctions
+.. automodule:: betterfunctions.mathfunctions
    :members:
    :undoc-members:
    :show-inheritance:
