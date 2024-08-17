@@ -68,10 +68,8 @@ def create_text_file(text: str,directory: str|None = None, filename: str ="file.
 
     Parameters
     ----------
-
     directory:
-        Das Verzeichnis, in dem die Datei erstellt werden soll.
-        Wenn None, wird das aktuelle Verzeichnis verwendet.
+        Das Verzeichnis, in dem die Datei erstellt werden soll. Wenn None, wird das aktuelle Verzeichnis verwendet.
     text:
         Der Text, der in die Datei geschrieben werden soll.
     filename:
