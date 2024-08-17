@@ -69,7 +69,7 @@ def gcd(a: int, b: int):
     return a
 
 
-def lcm(a, b):
+def lcm(a: int, b:int):
     """Berechnet das kleinste gemeinsame Vielfache zweier Zahlen.
 
     Parameters
@@ -83,7 +83,7 @@ def lcm(a, b):
     return abs(a*b) // gcd(a, b)
 
 
-def factorial(n):
+def factorial(n: str):
     """Berechnet die Fakultät einer Zahl.
 
     Parameters
@@ -122,7 +122,7 @@ def fahrenheit_to_celsius(fahrenheit: float):
     return (fahrenheit - 32) * 5/9
 
 
-def int_to_roman(num):
+def int_to_roman(num: str):
     """Konvertiert eine ganze Zahl in römische Ziffern.
 
     Parameters

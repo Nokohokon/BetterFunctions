@@ -14,6 +14,6 @@ def current_time():
     return datetime.datetime.now().strftime("%H:%M:%S")
 
 
-def is_leap_year(year):
+def is_leap_year(year: int):
     """Überprüft, ob ein Jahr ein Schaltjahr ist."""
     return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
