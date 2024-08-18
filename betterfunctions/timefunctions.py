@@ -1,27 +1,48 @@
 import datetime
+import pytz
+
 
 # Zeit Funktionen
 
 
-def current_date():
-    """Returns the current date.
+def current_date(timezone='UTC'):
+    """Returns the current date in the specified timezone.
+
+    Parameters
+    ----------
+    timezone : :class:`str`, optional
+        The timezone for which to return the date, specified as a UTC offset in the format 'UTC[+-]HH:MM', defaults to 'UTC'.
 
     Return
     ------
     :class:`str`
+        The current date in the format "dd.mm.yyyy".
     """
-    return datetime.date.today().strftime("%d.%m.%Y")
+    if timezone.startswith('UTC'):
+        tz = pytz.FixedOffset(pytz.utc_offset_timedelta(timezone))
+    else:
+        tz = pytz.timezone(timezone)
+    return datetime.datetime.now(tz).strftime("%d.%m.%Y")
 
 
-def current_time():
-    """Returns the current time.
+def current_time(timezone='UTC'):
+    """Returns the current time in the specified timezone.
+
+    Parameters
+    ----------
+    timezone : :class:`str`, optional
+        The timezone for which to return the time, specified as a UTC offset in the format 'UTC[+-]HH:MM', defaults to 'UTC'.
 
     Return
     ------
     :class:`str`
+        The current time in the format "HH:MM:SS".
     """
-    return datetime.datetime.now().strftime("%H:%M:%S")
-
+    if timezone.startswith('UTC'):
+        tz = pytz.FixedOffset(pytz.utc_offset_timedelta(timezone))
+    else:
+        tz = pytz.timezone(timezone)
+    return datetime.datetime.now(tz).strftime("%H:%M:%S")
 
 def is_leap_year(year: int):
     """Checks if a year is a leap year.

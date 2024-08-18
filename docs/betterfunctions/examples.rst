@@ -125,16 +125,20 @@ Time Functions
 --------------
 
 
->>> current_date()
+>>> current_date('UTC+2')
 >>> 18.08.2024
 
 
->>> current_time()
+>>> current_time('Europe/Berlin')
 >>> 22.0.06 <-- Output as colon
 
 
 >>> is_leap_year(2008)
 >>> True
+
+
+Userinput Functions
+-------------------
 
 
 >>> intput("Please insert an integer ")
