@@ -130,7 +130,7 @@ Time Functions
 
 
 >>> current_time()
->>> 22\:02\:06
+>>> 22.0.06 <-- Output as colon
 
 
 >>> is_leap_year(2008)
