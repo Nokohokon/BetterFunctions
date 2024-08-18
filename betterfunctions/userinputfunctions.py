@@ -64,9 +64,15 @@ def yes_no_input(prompt: str = "Please answer with yes or no: "):
             print("Wrong input. Please answer with yes or no.")
 
 
-def wait_for_key():
-    """Waits for the user to press a key."""
-    print("Press a key to continue...", end="")
+def wait_for_key(prompt: str = "Press a key to continue..."):
+    """Waits for the user to press a key.
+
+    Parameters
+    ----------
+    prompt:
+        The prompt which should be displayed in the console.
+    """
+    print(prompt, end="")
     if sys.platform.startswith('win'):
         import msvcrt
         msvcrt.getch()

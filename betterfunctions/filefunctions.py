@@ -42,17 +42,24 @@ def list_files_in_directory(directory: str):
     -------
     :class:`list`
     """
+    if directory is None:
+        directory = os.getcwd()
+
     return os.listdir(directory)
 
 
-def create_directory(directory: str):
+def create_directory(name: str):
     """Creates a new directory.
 
     Parameters
     ----------
-    directory:
+    name:
+        The name of the new directory.
     """
-    os.makedirs(directory, exist_ok=True)
+
+
+
+    os.makedirs(name=name, exist_ok=True)
 
 
 def delete_file(file_path: str):

@@ -13,7 +13,7 @@ This is the documentation for the library **betterfunctions**, a python-package 
    :hidden:
    :caption: Contents:
 
-
+   betterfunctions/examples
    betterfunctions/filefunctions
    betterfunctions/mathfunctions
    betterfunctions/randomfunctions
@@ -22,7 +22,7 @@ This is the documentation for the library **betterfunctions**, a python-package 
    betterfunctions/userinputfunctions
 
 How to start
--------
+------------
 
 With this steps you can start easily into betterfunctions:
 
@@ -40,3 +40,4 @@ Help
 
 - Are you searching something specific? Try your luck with :ref:`genindex`.
 - You have Discord? Write a dm to **konnija**.
+- You can get examples at :doc:`betterfunctions/examples`
