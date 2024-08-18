@@ -17,59 +17,9 @@ File functions
 >>> create_text_file(text=password,directory="passwords",filename="passwords.txt")
 
 
->>> delete_file('C:'"\Users\User\pythonPr\function_a.py")
+>>> delete_file("C:/Users/User/pythonPr/function_a.py")
 >>> 0.000046875 Megabyte
 
-
->>> list_files_in_directory("functions")
->>> ['function_a.py', 'function_b.py']
-
-
->>> create_directory(name="passwords")
->>> password = generate_password(8,True)
->>> create_text_file(text=password,directory="passwords",filename="passwords.txt")
-
-
->>> `delete_file(C:\Users\User\pythonPr\function_a.py")`
->>> 0.000046875 Megabyte
-
-
->>> list_files_in_directory("functions")
->>> ['function_a.py', 'function_b.py']
-
-
->>> create_directory(name="passwords")
->>> password = generate_password(8,True)
->>> create_text_file(text=password,directory="passwords",filename="passwords.txt")
-
-
->>> `delete_file('C:\Users\User\pythonPr\function_a.py')`
->>> 0.000046875 Megabyte
-
-
->>> list_files_in_directory("functions")
->>> ['function_a.py', 'function_b.py']
-
-
->>> create_directory(name="passwords")
->>> password = generate_password(8,True)
->>> create_text_file(text=password,directory="passwords",filename="passwords.txt")
-
-
->>> `delete_file("C:\Users\User\pythonPr\function_a.py")`
->>> 0.000046875 Megabyte
-
-
->>> list_files_in_directory("functions")
->>> ['function_a.py', 'function_b.py']
-
-
->>> create_directory(name="passwords")
->>> password = generate_password(8,True)
->>> create_text_file(text=password,directory="passwords",filename="passwords.txt")
-
-
->>> `delete_file("C:\Users\User\pythonPr\function_a.py")`
 
 
 Math Functions
@@ -180,7 +130,7 @@ Time Functions
 
 
 >>> current_time()
->>> `22:02:06`
+>>> 22\:02\:06
 
 
 >>> is_leap_year(2008)
