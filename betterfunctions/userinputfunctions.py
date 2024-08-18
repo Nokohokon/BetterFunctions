@@ -54,7 +54,7 @@ def yes_no_input(prompt: str = "Please answer with yes or no: "):
 
     Returns
     -------
-    :class:`boolean`
+    :class:`bool`
     """
     while True:
         answer = input(prompt).lower()

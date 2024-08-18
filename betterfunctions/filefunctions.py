@@ -13,6 +13,10 @@ def file_size(file_path: str, size_type: str = "KB"):
     size_type:
         The size type in which the result should be displayed. Defaults to KB.
 
+    Return
+    ------
+    :class:`str`
+        The size as a string.
     """
     if size_type == "KB":
         r = f"{os.path.getsize(file_path) / 1024} Kilobyte"
@@ -34,6 +38,11 @@ def list_files_in_directory(directory: str):
     ----------
     directory:
         The directory from which the items should be displayed.
+
+    Return
+    ------
+    :class:`list`
+        The list of all files.
     """
     return os.listdir(directory)
 

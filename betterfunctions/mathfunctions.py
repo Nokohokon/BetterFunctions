@@ -69,7 +69,7 @@ def is_prime(num: int):
 
     Returns
     -------
-    :class:`boolean`
+    :class:`bool`
         The result as a boolean.
     """
     if num < 2:
