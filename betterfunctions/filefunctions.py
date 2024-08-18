@@ -39,8 +39,8 @@ def list_files_in_directory(directory: str):
     directory:
         The directory from which the items should be displayed.
 
-    Return
-    ------
+    Returns
+    -------
     :class:`list`
         The list of all files.
     """
