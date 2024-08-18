@@ -30,7 +30,7 @@ File functions
 >>> create_text_file(text=password,directory="passwords",filename="passwords.txt")
 
 
->>> delete_file(C:\Users\User\pythonPr\function_a.py")
+>>> `delete_file(C:\Users\User\pythonPr\function_a.py")`
 >>> 0.000046875 Megabyte
 
 
@@ -43,7 +43,7 @@ File functions
 >>> create_text_file(text=password,directory="passwords",filename="passwords.txt")
 
 
->>> delete_file('C:\Users\User\pythonPr\function_a.py')
+>>> `delete_file('C:\Users\User\pythonPr\function_a.py')`
 >>> 0.000046875 Megabyte
 
 
@@ -56,7 +56,7 @@ File functions
 >>> create_text_file(text=password,directory="passwords",filename="passwords.txt")
 
 
->>> delete_file("C:\Users\User\pythonPr\function_a.py")
+>>> `delete_file("C:\Users\User\pythonPr\function_a.py")`
 >>> 0.000046875 Megabyte
 
 
@@ -69,7 +69,7 @@ File functions
 >>> create_text_file(text=password,directory="passwords",filename="passwords.txt")
 
 
->>> delete_file("C:\Users\User\pythonPr\function_a.py")
+>>> `delete_file("C:\Users\User\pythonPr\function_a.py")`
 
 
 Math Functions
@@ -180,7 +180,7 @@ Time Functions
 
 
 >>> current_time()
->>> 22:02:06
+>>> `22:02:06`
 
 
 >>> is_leap_year(2008)
