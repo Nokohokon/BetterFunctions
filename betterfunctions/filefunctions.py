@@ -42,7 +42,6 @@ def list_files_in_directory(directory: str):
     Returns
     -------
     :class:`list`
-        The list of all files.
     """
     return os.listdir(directory)
 
@@ -53,8 +52,6 @@ def create_directory(directory: str):
     Parameters
     ----------
     directory:
-        The name of the new directory.
-
     """
     os.makedirs(directory, exist_ok=True)
 
@@ -65,7 +62,6 @@ def delete_file(file_path: str):
     Parameters
     ----------
     file_path:
-        The path of the file.
     """
     os.remove(file_path)
 
