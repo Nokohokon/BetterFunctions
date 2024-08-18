@@ -9,7 +9,6 @@ def current_date():
     Return
     ------
     :class:`str`
-        The current date.
     """
     return datetime.date.today().strftime("%d.%m.%Y")
 
@@ -20,7 +19,6 @@ def current_time():
     Return
     ------
     :class:`str`
-        The current time.
     """
     return datetime.datetime.now().strftime("%H:%M:%S")
 
@@ -36,6 +34,5 @@ def is_leap_year(year: int):
     Returns
     -------
     :class:`bool`
-        Returns if the year is a leap year.
     """
     return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)

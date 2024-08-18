@@ -19,7 +19,6 @@ def generate_password(length: int = 12, include_special: bool = True):
     Returns
     -------
     :class:`str`
-        The generated password.
     """
     characters = string.ascii_letters + string.digits
     if include_special:
@@ -33,7 +32,6 @@ def random_color():
     Returns
     -------
     :class:`str`
-        The generated hex-color.
     """
     return "#{:06x}".format(random.randint(0, 0xFFFFFF))
 
@@ -48,7 +46,7 @@ def random_choice(items: list):
 
     Returns
     -------
-        random choice
+        random choice, class depends on the list.
 
     """
     return random.choice(items)
@@ -65,7 +63,6 @@ def shuffle_list(items: list):
     Returns
     -------
     :class:`list`
-        The shuffled list.
     """
     random.shuffle(items)
     return items

@@ -15,7 +15,6 @@ def intput(prompt: str = "Please insert an integer: "):
     Returns
     -------
     :class:`int`
-        The input as an integer.
     """
     while True:
         try:
@@ -35,7 +34,6 @@ def floatput(prompt: str = "Please insert a float: "):
     Returns
     -------
     :class:`float`
-        The input as a float.
     """
     while True:
         try:

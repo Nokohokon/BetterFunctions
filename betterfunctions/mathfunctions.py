@@ -18,7 +18,6 @@ def format_number(number: int, *, decimal_places: int = 1, trailing_zero: bool =
     Returns
     -------
     :class:`str`
-        The formatted number.
     """
 
     suffix = ""
@@ -51,7 +50,6 @@ def fibonacci(n: int):
     Returns
     -------
     :class:`list`
-        The list with the fibonaccis.
     """
     fib_sequence = [0, 1]
     while fib_sequence[-1] + fib_sequence[-2] <= n:
@@ -70,7 +68,6 @@ def is_prime(num: int):
     Returns
     -------
     :class:`bool`
-        The result as a boolean.
     """
     if num < 2:
         return False
@@ -91,7 +88,6 @@ def prime_numbers(n: int):
     Returns
     -------
     :class:`list`
-        The list with the prime numbers.
     """
     return [x for x in range(2, n + 1) if is_prime(x)]
 
@@ -109,7 +105,6 @@ def gcd(a: int, b: int):
     Returns
     -------
     :class:`int`
-        The gcd of both numbers.
     """
     while b:
         a, b = b, a % b
@@ -129,7 +124,6 @@ def lcm(a: int, b: int):
     Returns
     -------
     :class:`int`
-        The gcd of the both numbers.
     """
     return abs(a*b) // gcd(a, b)
 
@@ -145,7 +139,6 @@ def factorial(n: int):
     Returns
     -------
     :class:`int`
-        The factorial of the given umber.
     """
     if n == 0:
         return 1
@@ -164,7 +157,6 @@ def celsius_to_fahrenheit(celsius: float):
     Returns
     -------
     :class:`int`
-        The converted temperature.
     """
     return (celsius * 9/5) + 32
 
@@ -180,7 +172,6 @@ def fahrenheit_to_celsius(fahrenheit: float):
     Returns
     -------
     :class:`int`
-        The converted temperature.
     """
     return (fahrenheit - 32) * 5/9
 
@@ -196,7 +187,6 @@ def int_to_roman(num: int):
     Returns
     -------
     :class:`str`
-        The converted roman number.
     """
     val = [
         1000, 900, 500, 400,
@@ -237,6 +227,5 @@ def distance_between_points(x1: float, y1: float, x2: float, y2: float):
     Returns
     -------
     :class:`int`
-        The calculated distance as a integer.
     """
     return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)

@@ -34,7 +34,6 @@ def count_lines(
     Returns
     -------
     :class:`int`
-        The number of lines.
 
     """
     if directory is None:
@@ -82,7 +81,6 @@ def word_count(text: str):
     Returns
     -------
     :class:`int`
-        The amount of words.
     """
     words = text.split()
     return len(words)
@@ -99,7 +97,6 @@ def reverse_string(s: str):
     Returns
     -------
     :class:`str`
-        The reversed string.
     """
     return s[::-1]
 
@@ -116,7 +113,6 @@ def remove_punctuation(text: str):
     Returns
     -------
     :class:`str`
-        The string without punctuation.
     """
     return ''.join(char for char in text if char not in string.punctuation)
 
@@ -136,7 +132,6 @@ def replace_substring(text: str, old: str, new: str):
     Returns
     -------
     :class:`str`
-        The new string.
 
     """
     return text.replace(old, new)
@@ -153,8 +148,6 @@ def to_snake_case(text: str):
     Returns
     -------
     :class:`str`
-        The converted string.
-
     """
     return text.lower().replace(" ", "_")
 
@@ -171,8 +164,6 @@ def to_camel_case(text: str):
     Returns
     -------
     :class:`str`
-        The converted string
-
     """
     words = text.split()
     return words[0].lower() + ''.join(word.capitalize() for word in words[1:])
