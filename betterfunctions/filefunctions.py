@@ -13,10 +13,9 @@ def file_size(file_path: str, size_type: str = "KB"):
     size_type:
         The size type in which the result should be displayed. Defaults to KB.
 
-    Return
-    ------
+    Returns
+    -------
     :class:`str`
-        The size as a string.
     """
     if size_type == "KB":
         r = f"{os.path.getsize(file_path) / 1024} Kilobyte"
