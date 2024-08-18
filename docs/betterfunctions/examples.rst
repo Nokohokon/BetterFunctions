@@ -5,7 +5,7 @@ File functions
 --------------
 
 >>> file_size("datei.py",size_type="MB")
->>> 0.000046875 Megabyte
+>>> "0.000046875 Megabyte"
 
 
 >>> list_files_in_directory("functions")
@@ -18,7 +18,7 @@ File functions
 
 
 >>> delete_file("C:/Users/User/pythonPr/function_a.py")
->>> 0.000046875 Megabyte
+>>> "0.000046875 Megabyte"
 
 
 
@@ -26,7 +26,7 @@ Math Functions
 --------------
 
 >>> format_number(number=1000000,decimal_places=2,trailing_zero=True)
->>> 1.00M
+>>> "1.00M"
 
 
 >>> fibonacci(50)
@@ -62,7 +62,7 @@ Math Functions
 
 
 >>> int_to_roman(67)
->>> LXVII
+>>> "LXVII"
 
 
 >>> distance_between_points(2.3,5.7,1.9,4.6)
@@ -73,11 +73,11 @@ Random Functions
 ----------------
 
 >>> generate_password(length=15,include_special=False)
->>> a3UbfmyUCmnfqC5
+>>> "a3UbfmyUCmnfqC5"
 
 
 >>> random_color()
->>> #767b1c
+>>> "#767b1c"
 
 
 >>> my_list = [1,9,7,5]
@@ -102,23 +102,23 @@ Text Functions
 
 
 >>> reverse_string("hello")
->>> olleh
+>>> "olleh"
 
 
 >>> remove_punctuation("this is a nice text.")
->>> this is a nice text
+>>> "this is a nice text"
 
 
 >>> replace_substring(text="Hello my friend",old="friend",new="dear")
->>> Hello my dear
+>>> "Hello my dear"
 
 
 >>> to_snake_case("I am using Python")
->>> I_am_using_Python
+>>> "I_am_using_Python"
 
 
 >>> to_camel_case("It is a very nice day")
->>> itIsAVeryNiceDay
+>>> "itIsAVeryNiceDay"
 
 
 Time Functions
@@ -126,11 +126,11 @@ Time Functions
 
 
 >>> current_date('UTC+2')
->>> 18.08.2024
+>>> "18.08.2024"
 
 
 >>> current_time('Europe/Berlin')
->>> 22.0.06 <-- Output as colon
+>>> "22:0:6"
 
 
 >>> is_leap_year(2008)
