@@ -142,17 +142,17 @@ Userinput Functions
 
 
 >>> intput("Please insert an integer ")
->>> Please insert an integer *5*
+>>> Please insert an integer 5
 >>> 5
 
 
 >>> floatput("Please insert a float ")
->>> Please insert a float *3.5*
+>>> Please insert a float 3.5
 >>> 3.5
 
 
 >>> yes_no_input("Please answer with yes or no ")
->>> Please answer with yes or no *no*
+>>> Please answer with yes or no no
 >>> False
 
 
