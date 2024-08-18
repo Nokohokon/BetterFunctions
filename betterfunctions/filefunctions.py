@@ -1,94 +1,93 @@
 import os
 
-## Dateiverwaltungsfunktionen
+# Dateiverwaltungsfunktionen
 
 
-
-def file_size(file_path: str ,type: str = "KB"):
-    """Gibt die Größe einer Datei zurück.
+def file_size(file_path: str, size_type: str = "KB"):
+    """Returns the size of a file.
 
     Parameters
     ----------
     file_path:
-        Der Pfad der gewünschten Datei
-    type:
-        Der Größentyp, in welcher die Größe angegeben werden soll. Default: KB
+        The path of the file.
+    size_type:
+        The size type in which the result should be displayed. Defaults to KB.
 
     """
-    if type == "KB":
+    if size_type == "KB":
         r = f"{os.path.getsize(file_path) / 1024} Kilobyte"
 
-    elif type == "MB":
+    elif size_type == "MB":
         r = f"{os.path.getsize(file_path) / 1024 / 1024} Megabyte"
 
-    elif type == "GB":
+    elif size_type == "GB":
         r = f"{os.path.getsize(file_path) / 1024 / 1024 / 1024} Gigabyte"
     else:
-        raise("Please insert a regular size type like KB (kilobyte), MB (megabyte) or GB (gigabyte)")
+        raise("Please insert a regular size type like KB (kilobyte), MB (megabyte) or GB (gigabyte).")
     return r
 
 
 def list_files_in_directory(directory: str):
-    """Listet alle Dateien in einem Verzeichnis auf.
+    """Lists all files in a given directory.
 
     Parameters
     ----------
     directory:
-        Das Verzeichnis, aus  welchem die Dateien aufgelistet werden sollen.
+        The directory from which the items should be displayed.
     """
     return os.listdir(directory)
 
 
 def create_directory(directory: str):
-    """Erstellt ein neues Verzeichnis.
+    """Creates a new directory.
 
     Parameters
     ----------
     directory:
-        Der Name des neuen Verzeichnisses
+        The name of the new directory.
 
     """
     os.makedirs(directory, exist_ok=True)
 
 
 def delete_file(file_path: str):
-    """Löscht eine Datei.
+    """Deletes a file.
 
     Parameters
     ----------
     file_path:
-        Der Pfad zur Datei
+        The path of the file.
     """
     os.remove(file_path)
 
 
-def create_text_file(text: str,directory: str|None = None, filename: str ="file.txt"):
+def create_text_file(text: str, directory: str | None = None, filename: str = "file.txt"):
     """
-    Erstellt eine Textdatei mit dem angegebenen Text und Dateinamen.
+    Creates a text file in a directory with given name and given text.
 
     Parameters
     ----------
     directory:
-        Das Verzeichnis, in dem die Datei erstellt werden soll. Wenn None, wird das aktuelle Verzeichnis verwendet.
+        The directory where the file should be created. Default's to None.
     text:
-        Der Text, der in die Datei geschrieben werden soll.
+        The text, which should be in the created file.
     filename:
-        Der Name der zu erstellenden Datei.
+        The name of the created file.
     """
 
     if not text:
         raise("Please insert a text into the function.")
-    # Verwende das aktuelle Verzeichnis, wenn kein Verzeichnis angegeben ist
+    # Take the current directory if none is given.
     if directory is None:
         directory = os.getcwd()
 
-    # Erstelle den vollständigen Pfad zur Datei
+    # Create the path to the file.
     file_path = os.path.join(directory, filename)
 
     try:
-        # Öffne die Datei im Schreibmodus und schreibe den Text hinein
+        # Open the file in writing-mode and paste the text in.
         with open(file_path, 'w') as file:
             file.write(text)
-        print(f"Datei '{filename}' erfolgreich erstellt in '{directory}'.")
+        print(f"File '{filename}' succesfully created at '{directory}'.")
     except Exception as e:
-        print(f"Fehler beim Erstellen der Datei: {e}")
+        print(f"Error by creating the file: {e}")

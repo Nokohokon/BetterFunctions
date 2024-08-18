@@ -1,8 +1,8 @@
 
-Willkommen bei **betterfunctions** Dokumentation!
+Welcome at **betterfunctions** documentation!
 ========================================================================
 
-Das ist die Dokumentation für **betterfunctions**, eine Pythonerweiterung mit neuen Utility-Funktionen.
+This is the documentation for the library **betterfunctions**, a python-package with often used functions.
 
 
 
@@ -21,21 +21,22 @@ Das ist die Dokumentation für **betterfunctions**, eine Pythonerweiterung mit n
    betterfunctions/timefunctions
    betterfunctions/userinputfunctions
 
-Starten
+How to start
 -------
 
-Mithilfe dieser Links startest du ganz einfach:
+With this steps you can start easily into betterfunctions:
 
-- **Installieren:**
-    Führe diesen Command im Terminal aus:
-    `pip install betterfunctions`
+- **Install:**
+    - Execute this command in the terminal:
+    - `pip install betterfunctions`
 
-    Importiere das Package in den Code:
-    `from betterfunctions import *`
+- **Import:**
+    - Import the package into the code:
+    - `from betterfunctions import *`
 
 
-Hilfe
+Help
 -----
 
-- Du suchst etwas bestimmtes? Versuche dein Glück mit :ref:`genindex`
-- Du hast Discord? Schreibe `konnija` eine DM.
+- Are you searching something specific? Try your luck with :ref:`genindex`.
+- You have Discord? Write a dm to **konnija**.

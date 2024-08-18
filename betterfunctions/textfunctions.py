@@ -3,7 +3,9 @@ import os
 import fnmatch
 from pathlib import Path
 
-## Textverarbeitungsfunktionen
+# Textverarbeitungsfunktionen
+
+
 def count_lines(
     directory: str | None = None,
     *,
@@ -27,6 +29,13 @@ def count_lines(
         are ignored.
     ignored_files:
         A list of file patterns to ignore.
+
+
+    Returns
+    -------
+    :class:`int`
+        The number of lines.
+
     """
     if directory is None:
         directory = os.getcwd()
@@ -61,76 +70,108 @@ def count_lines(
 
     return total_lines
 
+
 def word_count(text: str):
-    """Zählt die Anzahl der Wörter in einem gegebenen Text.
+    """Counts the words in a given string.
 
     Parameters
     ---------
     text:
-        Der Text, aus welchem die Wörter gezählt werden sollen.
+        The string used to count the words.
+
+    Returns
+    -------
+    :class:`int`
+        The amount of words.
     """
     words = text.split()
     return len(words)
 
 
 def reverse_string(s: str):
-    """Kehrt einen gegebenen String um.
+    """Reverses a given string.
 
     Parameters
     ----------
     s:
-        Der String welcher umgekehrt werden soll.
+        The string which should be reversed.
+
+    Returns
+    -------
+    :class:`str`
+        The reversed string.
     """
     return s[::-1]
 
 
 def remove_punctuation(text: str):
-    """Entfernt Satzzeichen aus einem gegebenen Text.
+    """Removes punctuation from a given string.
 
     Parameters
     ----------
 
     text:
-        Der Text, aus welchem Satzzeichen entfernt werden soll
+        The string, whom you want to remove the punctuation from.
+
+    Returns
+    -------
+    :class:`str`
+        The string without punctuation.
     """
     return ''.join(char for char in text if char not in string.punctuation)
 
 
 def replace_substring(text: str, old: str, new: str):
-    """Ersetzt ein Substring durch einen neuen String.
+    """Replaces a substring with a new text.
 
     Parameters
     ----------
     text:
-        Der Text, in welchem die Änderung erfolgen soll
+        The string where the substring is in.
     old:
-        Der zu ersetzende Text.
+        The old substring.
     new:
-        Der ersetzte Text.
+        The new content of the substring.
+
+    Returns
+    -------
+    :class:`str`
+        The new string.
 
     """
     return text.replace(old, new)
 
 
-def to_snake_case(text:str):
-    """Wandelt einen String in snake_case um.
+def to_snake_case(text: str):
+    """Converts a string to snake case.
 
     Parameters
     ----------
     text:
-        Der Text welcher umgewandelt werden soll.
+        The string which should be converted.
+
+    Returns
+    -------
+    :class:`str`
+        The converted string.
 
     """
     return text.lower().replace(" ", "_")
 
 
-def to_camel_case(text:str):
-    """Wandelt einen String in camelCase um.
+def to_camel_case(text: str):
+    """Converts a string to camelcase.
 
     Parameters
     ----------
     text:
-        Der Text welcher umgewandelt werden soll.
+        The string which should be converted.
+
+
+    Returns
+    -------
+    :class:`str`
+        The converted string
 
     """
     words = text.split()

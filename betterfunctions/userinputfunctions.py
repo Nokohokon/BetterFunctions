@@ -1,48 +1,60 @@
 import sys
 
 
-## Benutzereingabefunktionen
+# Benutzereingabefunktionen
 
 
-def intput(prompt: str ="Bitte gib eine Ganzzahl ein: "):
-    """Fragt den Benutzer nach einer Ganzzahl und gibt diese als Integer zurück.
+def intput(prompt: str = "Please insert an integer: "):
+    """Asks for an integer and returns the input as an int.
+
+    Parameters
+    ----------
+    prompt:
+        The wanted prompt for the input.
+
+    Returns
+    -------
+    :class:`int`
+        The input as an integer.
+    """
+    while True:
+        try:
+            return int(input(prompt))  # Converts the input to an integer
+        except ValueError:
+            print("Wrong input. Please insert a number.")
+
+
+def floatput(prompt: str = "Please insert a float: "):
+    """Asks for a float and returns the input as a float.
 
     Parameters
     ----------
     prompt:
         Die gewünschte Aufforderung.
 
+    Returns
+    -------
+    :class:`float`
+        The input as a float.
     """
     while True:
         try:
-            return int(input(prompt))  # Konvertiert die Eingabe in eine Ganzzahl
+            return float(input(prompt))  # Converts the input into a float.
         except ValueError:
-            print("Ungültige Eingabe. Bitte gib eine gültige Zahl ein.")
+            print("Wrong input. Please insert a float.")
 
 
-def floatput(prompt: str = "Bitte gib eine Gleitzahl ein: "):
-    """Fragt den Benutzer nach einer Zahl und gibt diese als Float zurück.
-
-    Parameters
-    ----------
-    prompt:
-        Die gewünschte Aufforderung.
-
-    """
-    while True:
-        try:
-            return float(input(prompt))  # Konvertiert die Eingabe in eine Gleitkommazahl
-        except ValueError:
-            print("Ungültige Eingabe. Bitte gib eine gültige Zahl ein.")
-
-
-def yes_no_input(prompt: str = "Bitte antworte mit Ja oder Nein: "):
-    """Fragt den Benutzer nach einer Ja/Nein-Antwort und gibt True oder False zurück.
+def yes_no_input(prompt: str = "Please answer with yes or no: "):
+    """Asks for a yes or no. Returns the input as a boolean.
 
     Parameters
     ---------
     prompt:
-        Die gewünschte Aufforderung.
+        The wanted prompt.
+
+    Returns
+    -------
+    :class:`boolean`
     """
     while True:
         answer = input(prompt).lower()
@@ -51,12 +63,12 @@ def yes_no_input(prompt: str = "Bitte antworte mit Ja oder Nein: "):
         elif answer in ["n", "nein", "no"]:
             return False
         else:
-            print("Ungültige Eingabe. Bitte antworte mit Ja oder Nein.")
+            print("Wrong input. Please answer with yes or no.")
 
 
 def wait_for_key():
-    """Wartet darauf, dass der Benutzer eine Taste drückt."""
-    print("Drücke eine beliebige Taste, um fortzufahren...", end="")
+    """Waits for the user to press a key."""
+    print("Press a key to continue...", end="")
     if sys.platform.startswith('win'):
         import msvcrt
         msvcrt.getch()

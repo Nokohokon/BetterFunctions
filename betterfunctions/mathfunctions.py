@@ -1,25 +1,24 @@
 import math
 
-## Mathematische Funktionen
+# Mathematische Funktionen
 
 
 def format_number(number: int, *, decimal_places: int = 1, trailing_zero: bool = False) -> str:
-    """Formatiere eine große Nummer zu einem kleinen Format.
+    """Formats a big number into a tiny, readable format.
 
     Parameters
     ----------
     number:
-        Die zu formatierende Nummer.
+        The number which should be formatted.
     decimal_places:
-        Die Anzahl der Dezimalstellen, welche dargestellt werden sollen. Default: ``1``.
+        The amount of decimal places which should be displayed. Defaults to 1.
     trailing_zero:
-        Soll eine Trailing Zero dargestellt werden? Default: ``False``.
+        Should trailing zeros be displayed? Default: False.
 
     Returns
     -------
     :class:`str`
-        Die formatierte Zahl.
-
+        The formatted number.
     """
 
     suffix = ""
@@ -40,14 +39,19 @@ def format_number(number: int, *, decimal_places: int = 1, trailing_zero: bool =
 
     return txt + suffix
 
+
 def fibonacci(n: int):
-    """Generiert eine Liste der Fibonacci-Zahlen bis n.
+    """Generates a list with the fibonacci-numbers to n.
 
     Parameters
     ----------
     n:
-        Die Zahl, bis zu welcher Fibonaccis generiert werden sollen.
+        The number to where the fibonaccis should be generated.
 
+    Returns
+    -------
+    :class:`list`
+        The list with the fibonaccis.
     """
     fib_sequence = [0, 1]
     while fib_sequence[-1] + fib_sequence[-2] <= n:
@@ -56,13 +60,17 @@ def fibonacci(n: int):
 
 
 def is_prime(num: int):
-    """Überprüft, ob eine Zahl prim ist.
+    """Checks if a number is a prime number.
 
     Parameters
     ----------
     num:
-        Die Zahl, welche überprüft werden soll.
+        The number which should be checked.
 
+    Returns
+    -------
+    :class:`boolean`
+        The result as a boolean.
     """
     if num < 2:
         return False
@@ -73,55 +81,71 @@ def is_prime(num: int):
 
 
 def prime_numbers(n: int):
-    """Generiert eine Liste der Primzahlen bis n.
+    """Generates a list with the prime numbers to n.
 
     Parameters
     ----------
     n:
-        Die Zahl, bis zu welcher Primzahlen generiert werden sollen.
+        The number, to where the prime numbers should be generated.
 
+    Returns
+    -------
+    :class:`list`
+        The list with the prime numbers.
     """
     return [x for x in range(2, n + 1) if is_prime(x)]
 
 
 def gcd(a: int, b: int):
-    """Berechnet den größten gemeinsamen Teiler zweier Zahlen.
+    """Calculates the gcd of two numbers.
 
     Parameters
     ----------
     a:
-        Die erste Zahl.
+        The first number.
     b:
-        Die zweite Zahl.
+        The second number.
 
+    Returns
+    -------
+    :class:`int`
+        The gcd of both numbers.
     """
     while b:
         a, b = b, a % b
     return a
 
 
-def lcm(a: int, b:int):
-    """Berechnet das kleinste gemeinsame Vielfache zweier Zahlen.
+def lcm(a: int, b: int):
+    """Calculates the lcm of two numbers.
 
     Parameters
     ----------
     a:
-        Die erste Zahl.
+        The first number.
     b:
-        Die zweite Zahl
+        The second number.
 
+    Returns
+    -------
+    :class:`int`
+        The gcd of the both numbers.
     """
     return abs(a*b) // gcd(a, b)
 
 
-def factorial(n: str):
-    """Berechnet die Fakultät einer Zahl.
+def factorial(n: int):
+    """Calculates the factorial of a number.
 
     Parameters
     ----------
     n:
-        Die Zahl, welche als Basis dient.
+        The number where the factorial should be calculated.
 
+    Returns
+    -------
+    :class:`int`
+        The factorial of the given umber.
     """
     if n == 0:
         return 1
@@ -130,37 +154,49 @@ def factorial(n: str):
 
 
 def celsius_to_fahrenheit(celsius: float):
-    """Konvertiert Celsius in Fahrenheit.
+    """Converts celsius to fahrenheit.
 
     Parameters
     ----------
     celsius:
-        Die Temperatur in Celsius, welche umgewandelt werden soll.
+        The temperature in fahrenheit.
 
+    Returns
+    -------
+    :class:`int`
+        The converted temperature.
     """
     return (celsius * 9/5) + 32
 
 
 def fahrenheit_to_celsius(fahrenheit: float):
-    """Konvertiert Fahrenheit in Celsius.
+    """Converts fahrenheit to celsius.
 
     Parameters
     ----------
     fahrenheit:
-        Die Temperatur in Fahrenheit welche konvertiert werden soll.
+        The temperature in fahrenheit.
 
+    Returns
+    -------
+    :class:`int`
+        The converted temperature.
     """
     return (fahrenheit - 32) * 5/9
 
 
-def int_to_roman(num: str):
-    """Konvertiert eine ganze Zahl in römische Ziffern.
+def int_to_roman(num: int):
+    """Converts an integer to a roman number.
 
     Parameters
     ----------
     num:
-        Die Nummer welche umgewandelt werden soll.
+        The number which should be converted.
 
+    Returns
+    -------
+    :class:`str`
+        The converted roman number.
     """
     val = [
         1000, 900, 500, 400,
@@ -185,19 +221,22 @@ def int_to_roman(num: str):
 
 
 def distance_between_points(x1: float, y1: float, x2: float, y2: float):
-    """Berechnet die Entfernung zwischen zwei Punkten.
+    """Calculates the distance between two points.
 
     Parameters
     ----------
     x1:
-        Die x-Koordinate des ersten Punkts
+        The x-Coordinate of the first point.
     x2:
-        Die x-Koordinate des zweiten Punkts
+        The x-Coordinate of the second point.
     y1:
-        Die y-Koordinate des ersten Punkts
+        The y-Coordinate of the first point.
     y2:
-        Die y-Koordinate des zweiten Punkts
+        The y-Coordinate of the second point.
 
-
+    Returns
+    -------
+    :class:`int`
+        The calculated distance as a integer.
     """
     return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)

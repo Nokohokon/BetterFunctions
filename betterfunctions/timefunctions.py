@@ -1,26 +1,41 @@
 import datetime
 
-## Zeit Funktionen
-
+# Zeit Funktionen
 
 
 def current_date():
-    """Gibt das aktuelle Datum zurück."""
+    """Returns the current date.
+
+    Return
+    ------
+    :class:`str`
+        The current date.
+    """
     return datetime.date.today().strftime("%d.%m.%Y")
 
 
 def current_time():
-    """Gibt die aktuelle Uhrzeit zurück."""
+    """Returns the current time.
+
+    Return
+    ------
+    :class:`str`
+        The current time.
+    """
     return datetime.datetime.now().strftime("%H:%M:%S")
 
 
 def is_leap_year(year: int):
-    """Überprüft, ob ein Jahr ein Schaltjahr ist.
+    """Checks if a year is a leap year.
 
     Parameters
     ----------
     year:
-        Das Jahr, welches überprüft werden soll.
+        The year which should be checked.
 
+    Returns
+    -------
+    :class:`boolean`
+        Returns if the year is a leap year.
     """
     return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
