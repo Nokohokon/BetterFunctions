@@ -12,7 +12,7 @@ def generate_password(length: int = 12, include_special: bool = True):
     ----------
 
     length:
-        The length of the passwor. Defaults to 12.
+        The length of the password. Defaults to 12.
     include_special:
         Should special characters be included? Defaults to True
 
